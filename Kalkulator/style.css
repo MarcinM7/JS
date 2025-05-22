@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Stylowanie całej strony */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Główny kontener kalkulatora */
+.calculator {
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 350px;
+}
+
+/* Tytuł kalkulatora */
+.calculator h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Ekran wyświetlający wyniki */
+.display {
+    width: 100%;
+    height: 80px;
+    font-size: 32px;
+    text-align: right;
+    padding: 0 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background: #f8f9fa;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Kontener dla przycisków */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+/* Podstawowe stylowanie przycisków */
+.btn {
+    height: 60px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: white;
+}
+
+/* Efekt hover dla przycisków */
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Efekt kliknięcia */
+.btn:active {
+    transform: translateY(0);
+}
+
+/* Przycisk liczb */
+.btn-number {
+    background: #4CAF50;
+}
+
+.btn-number:hover {
+    background: #45a049;
+}
+
+/* Przycisk operatorów */
+.btn-operator {
+    background: #2196F3;
+}
+
+.btn-operator:hover {
+    background: #1976D2;
+}
+
+/* Przycisk równa się */
+.btn-equals {
+    background: #FF5722;
+    grid-column: span 2; /* Zajmuje 2 kolumny */
+}
+
+.btn-equals:hover {
+    background: #E64A19;
+}
+
+/* Przycisk Clear */
+.btn-clear {
+    background: #f44336;
+}
+
+.btn-clear:hover {
+    background: #d32f2f;
+}
+
+/* Przycisk Delete */
+.btn-delete {
+    background: #FF9800;
+}
+
+.btn-delete:hover {
+    background: #F57C00;
+}
+
+/* Responsywność dla mniejszych ekranów */
+@media (max-width: 480px) {
+    .calculator {
+        padding: 20px;
+        max-width: 300px;
+    }
+    
+    .display {
+        height: 60px;
+        font-size: 24px;
+    }
+    
+    .btn {
+        height: 50px;
+        font-size: 18px;
+    }
+}
